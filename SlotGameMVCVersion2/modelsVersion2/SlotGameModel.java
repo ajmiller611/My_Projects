@@ -1,7 +1,6 @@
 package modelsVersion2;
 
 public class SlotGameModel {
-	private Reels reels;
 	private SymbolEnum[][] reelBoard = new SymbolEnum[3][5];
 	private int totalCredits = 100;
 	private int betPerLine = 1;
@@ -9,11 +8,7 @@ public class SlotGameModel {
 	private int linesPlayed = 1;
 	
 	public SlotGameModel() {
-		this.reels = new Reels();
-	}
-	
-	public void createReels() {
-		reels.createReels();
+		
 	}
 	
 	public SymbolEnum[][] getResultsBoard() {
@@ -21,6 +16,7 @@ public class SlotGameModel {
 	}
 	
 	public void generateResultsBoard() {
+		Reels reels = new Reels();
 		reelBoard = reels.getReelBoardResult();
 	}
 	
