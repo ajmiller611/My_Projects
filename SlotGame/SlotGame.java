@@ -27,8 +27,7 @@ public class SlotGame extends JFrame implements Serializable {
 	private SpringLayout layout;
 	Container contain;
 	
-	public SlotGame() {
-		//Setup the GUI
+	public Slotgame() {
 		super("Slot Machine");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		
@@ -95,14 +94,11 @@ public class ButtonHandler implements ActionListener {
 				repaint();
 			}
 			
-			//Randomly select a stop position and get the icons from each reel
 			for (int a = 0; a < 5; a++) {
 				stopPosition = (int) (Math.random() * 6);
-				//System.out.println(stopPosition);
+				System.out.println(stopPosition);
 				reelArray = Reels.getResults(stopPosition, a + 1);
 				//System.arraycopy(Reels.getResults(stopPosition, a + 1), 0, reelBoard[a], 0, 3);
-				
-				//Place the results from each reel into the reel board array to display the results like a slot machine
 				for (int b = 0; b < 3; b++) {					
 					reelBoard[b][a] = reelArray[b];
 				}
