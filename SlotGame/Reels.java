@@ -23,6 +23,7 @@ public class Reels {
 	}
 	
 	public static void loadReels(){
+		//Read the images for the icons that will be on the reels
 		try{
 			horseshoe = ImageIO.read(new File("horseshoe.png"));
 			gold = ImageIO.read(new File("gold.png"));
@@ -31,6 +32,7 @@ public class Reels {
 			JOptionPane.showMessageDialog(null, "Error:" + e);
 		}
 		
+		//Place icons into the each reel's linked list
 		for (int a = 0; a < 6; a++)
 			switch (a){
 				case 0: reel1.add(horseshoe);
@@ -70,6 +72,8 @@ public class Reels {
 						reel5.add(horseshoe);
 						break;			
 			}
+		
+		//Use HashMap to store each reel to be able to reference each reel by number
 		map.put(1, reel1);
 		map.put(2, reel2);
 		map.put(3, reel3);
@@ -77,6 +81,7 @@ public class Reels {
 		map.put(5, reel5);
 	}
 	
+	//Get the icons at the stop position and the icons above and below the stop position.
 	public static BufferedImage[] getResults (int stop, int reel){
 		BufferedImage[] result = new BufferedImage[3];
 		CLinkedList temp = map.get(reel);
