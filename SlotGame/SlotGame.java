@@ -1,6 +1,5 @@
 import javax.imageio.ImageIO;
 import javax.swing.*;
-//import javax.swing.SpringLayout;
 import java.awt.*;
 import java.awt.event.*;
 import java.awt.image.BufferedImage;
