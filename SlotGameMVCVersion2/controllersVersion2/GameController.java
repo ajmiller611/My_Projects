@@ -9,7 +9,6 @@ import javax.swing.Timer;
 
 import modelsVersion2.CircularLinkedList;
 import modelsVersion2.GameSounds;
-import modelsVersion2.Reels;
 import modelsVersion2.SlotGameModel;
 import modelsVersion2.SymbolEnum;
 import viewsVersion2.GameGUI;
@@ -37,7 +36,7 @@ public class GameController {
 	}
 	
 	public void loadResources() {
-		Reels.createReels();
+		gameModel.createReels();
 		
 		payout.setupPaylines();
 		
@@ -82,8 +81,7 @@ public class GameController {
 	}
 	
 	public CircularLinkedList getReel(int index) {
-		Reels reels = new Reels();
-		return reels.getReel(index);
+		return gameModel.getReel(index);
 	}
 	
 	public SymbolEnum[][] getResultsBoard() {
@@ -171,7 +169,7 @@ public class GameController {
 						//Counter variable used to stop the timer
 						int counter = 0;
 						//Pick random position on the reel to start at
-						int reelOneIndexCounter = (int) (Math.random() * getReel(1).size());
+						int reelOneIndexCounter = (int) (Math.random() * gameModel.getReel(1).size());
 						public void actionPerformed(ActionEvent e) {
 							//Tell view to spin reel one
 							gameView.spinReelOne(reelOneIndexCounter);
@@ -189,7 +187,7 @@ public class GameController {
 						
 					final Timer reelTwoTimer = new Timer(100, new ActionListener() {
 						int counter = 0;
-						int reelTwoIndexCounter = (int) (Math.random() * getReel(2).size());
+						int reelTwoIndexCounter = (int) (Math.random() * gameModel.getReel(2).size());
 						public void actionPerformed(ActionEvent e) {
 							gameView.spinReelTwo(reelTwoIndexCounter);
 							reelTwoIndexCounter = checkCounter(reelTwoIndexCounter);
@@ -203,7 +201,7 @@ public class GameController {
 						
 					final Timer reelThreeTimer = new Timer(100, new ActionListener() {
 						int counter = 0;
-						int reelThreeIndexCounter = (int) (Math.random() * getReel(3).size());
+						int reelThreeIndexCounter = (int) (Math.random() * gameModel.getReel(3).size());
 						public void actionPerformed(ActionEvent e) {
 							gameView.spinReelThree(reelThreeIndexCounter);
 							reelThreeIndexCounter = checkCounter(reelThreeIndexCounter);
@@ -217,7 +215,7 @@ public class GameController {
 						
 					final Timer reelFourTimer = new Timer(100, new ActionListener() {
 						int counter = 0;
-						int reelFourIndexCounter = (int) (Math.random() * getReel(4).size());
+						int reelFourIndexCounter = (int) (Math.random() * gameModel.getReel(4).size());
 						public void actionPerformed(ActionEvent e) {
 							gameView.spinReelFour(reelFourIndexCounter);
 							reelFourIndexCounter = checkCounter(reelFourIndexCounter);
@@ -231,7 +229,7 @@ public class GameController {
 						
 					final Timer reelFiveTimer = new Timer(100, new ActionListener() {
 						int counter = 0;
-						int reelFiveIndexCounter = (int) (Math.random() * getReel(5).size());
+						int reelFiveIndexCounter = (int) (Math.random() * gameModel.getReel(5).size());
 						public void actionPerformed(ActionEvent e) {
 							gameView.spinReelFive(reelFiveIndexCounter);
 							reelFiveIndexCounter = checkCounter(reelFiveIndexCounter);

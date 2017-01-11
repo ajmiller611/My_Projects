@@ -1,4 +1,4 @@
-package modelsVersion2;
+package models;
 
 public class SlotGameModel {
 	private SymbolEnum[][] reelBoard = new SymbolEnum[3][5];

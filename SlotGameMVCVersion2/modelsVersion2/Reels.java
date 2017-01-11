@@ -1,4 +1,4 @@
-package modelsVersion2;
+package models;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -105,9 +105,5 @@ public class Reels {
 		result[1] = temp.get(stop);
 		result[2] = temp.get(stop + 1);
 		return result;
-	}
-	
-	public CircularLinkedList getReel(int index) {
-		return map.get(index);
 	}
 }
