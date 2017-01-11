@@ -1,6 +1,9 @@
-package models;
+package modelsVersion2;
+
+import modelsVersion2.Reels;
 
 public class SlotGameModel {
+	private Reels reels;
 	private SymbolEnum[][] reelBoard = new SymbolEnum[3][5];
 	private int totalCredits = 100;
 	private int betPerLine = 1;
@@ -8,7 +11,15 @@ public class SlotGameModel {
 	private int linesPlayed = 1;
 	
 	public SlotGameModel() {
-		
+		reels = new Reels();
+	}
+	
+	public void createReels() {
+		reels.createReels();
+	}
+	
+	public CircularLinkedList getReel(int index) {
+		return reels.getReel(index);
 	}
 	
 	public SymbolEnum[][] getResultsBoard() {
@@ -16,7 +27,6 @@ public class SlotGameModel {
 	}
 	
 	public void generateResultsBoard() {
-		Reels reels = new Reels();
 		reelBoard = reels.getReelBoardResult();
 	}
 	

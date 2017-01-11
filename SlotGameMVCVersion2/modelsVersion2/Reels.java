@@ -1,21 +1,21 @@
-package models;
+package modelsVersion2;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class Reels {
-	private static CircularLinkedList reel1 = new CircularLinkedList();
-	private static CircularLinkedList reel2 = new CircularLinkedList();
-	private static CircularLinkedList reel3 = new CircularLinkedList();
-	private static CircularLinkedList reel4 = new CircularLinkedList();
-	private static CircularLinkedList reel5 = new CircularLinkedList();
-	private static Map<Integer, CircularLinkedList> map = new HashMap<Integer, CircularLinkedList>();
+	private CircularLinkedList reel1 = new CircularLinkedList();
+	private CircularLinkedList reel2 = new CircularLinkedList();
+	private CircularLinkedList reel3 = new CircularLinkedList();
+	private CircularLinkedList reel4 = new CircularLinkedList();
+	private CircularLinkedList reel5 = new CircularLinkedList();
+	private Map<Integer, CircularLinkedList> map = new HashMap<Integer, CircularLinkedList>();
 	
 	public Reels() {
 			
 	}
 	
-	public static void createReels() {
+	public void createReels() {
 		//Add a symbol to each reel a total of 6 times.
 		for (int a = 0; a < 6; a++) {
 			switch (a) {
@@ -85,7 +85,7 @@ public class Reels {
 			stopPosition = (int) (Math.random() * 7);
 			
 			//Array holds the 3 symbols that need to be displayed for that stop position on a reel.
-			reelArray = Reels.getResults(stopPosition, a + 1);
+			reelArray = getResults(stopPosition, a + 1);
 			
 			int row = 0;
 			for(int b = 0; b < 3; b++) {
@@ -98,12 +98,16 @@ public class Reels {
 		return reelBoard;
 	}
 	
-	private static SymbolEnum[] getResults (int stop, int reel){
+	private SymbolEnum[] getResults (int stop, int reel){
 		SymbolEnum[] result = new SymbolEnum[3];
 		CircularLinkedList temp = map.get(reel);
 		result[0] = temp.get(stop - 1); 
 		result[1] = temp.get(stop);
 		result[2] = temp.get(stop + 1);
 		return result;
+	}
+	
+	public CircularLinkedList getReel(int index) {
+		return map.get(index);
 	}
 }
