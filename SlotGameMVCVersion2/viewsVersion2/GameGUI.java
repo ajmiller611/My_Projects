@@ -34,8 +34,8 @@ public class GameGUI {
 	private JPanel[] slotPanelCells = new JPanel[15];
 	
 	
-	public GameGUI(GameController controller) {
-		this.controller = controller;
+	public GameGUI() {
+		this.controller = GameController.getGameControllerInstance();
 		listener = controller.getActionListener();
 		initializeUI();
 	}
@@ -71,26 +71,26 @@ public class GameGUI {
 		
 		centerPanel.add(Box.createRigidArea(new Dimension(500, 60)));
 		
-		JPanel test = new JPanel();
-		test.setMaximumSize(new Dimension(150, 150));
-		test.setPreferredSize(new Dimension(150, 150));
-		JLabel lepTest = new JLabel();
+		JPanel leprechaunGraphicHolder = new JPanel();
+		leprechaunGraphicHolder.setMaximumSize(new Dimension(150, 150));
+		leprechaunGraphicHolder.setPreferredSize(new Dimension(150, 150));
+		JLabel leprechaunGraphic = new JLabel();
 		
 		try {
 			BufferedImage lep = ImageIO.read(new File("./leprechaun_drinking_beer.jpg"));
 			ImageIcon image = new ImageIcon(lep);
-			lepTest.setIcon(image);
+			leprechaunGraphic.setIcon(image);
 		} catch (Exception ex) {
 			System.out.println("Error: " + ex);
 		}
 		
-		test.add(lepTest);
-		centerPanel.add(test);
+		leprechaunGraphicHolder.add(leprechaunGraphic);
+		centerPanel.add(leprechaunGraphicHolder);
 		
 		slotHolderPanel = new JPanel();
 		slotHolderPanel.setMaximumSize(new Dimension(220, 145));
 		slotHolderPanel.setBackground(Color.BLACK);
-		//slotPanel = getResultsSlotPanel(controller.getResultsBoard());
+		
 		slotPanel = new JPanel(new GridLayout(3, 5));
 		slotPanel.setMaximumSize(new Dimension(210, 145));
 		slotPanel.setPreferredSize(new Dimension(210, 145));
@@ -112,21 +112,21 @@ public class GameGUI {
 		slotHolderPanel.add(slotPanel);
 		centerPanel.add(slotHolderPanel);
 		
-		JPanel test2 = new JPanel();
-		test2.setMaximumSize(new Dimension(100, 150));
-		test2.setPreferredSize(new Dimension(100, 150));
-		JLabel lepTest2	= new JLabel();
+		JPanel leprechaunGraphicHolder2 = new JPanel();
+		leprechaunGraphicHolder2.setMaximumSize(new Dimension(100, 150));
+		leprechaunGraphicHolder2.setPreferredSize(new Dimension(100, 150));
+		JLabel leprechaunGraphic2	= new JLabel();
 		
 		try {
 			BufferedImage lepBeer = ImageIO.read(new File("./leprechaun_test.png"));
 			ImageIcon image = new ImageIcon(lepBeer);
-			lepTest2.setIcon(image);
+			leprechaunGraphic2.setIcon(image);
 		} catch (Exception ex) {
 			System.out.println("Error: " + ex);
 		}
 		
-		test2.add(lepTest2);
-		centerPanel.add(test2);
+		leprechaunGraphicHolder2.add(leprechaunGraphic2);
+		centerPanel.add(leprechaunGraphicHolder2);
 		slotGamePanel.add(centerPanel);
 		
 		JPanel chipInformationPanel = new JPanel();
@@ -220,7 +220,6 @@ public class GameGUI {
 		mainPanel.add(slotGamePanel, "Main");
 		
 		frame.add(mainPanel);
-		System.out.println(slotPanel.getSize());
 	}
 	
 	public JPanel getResultsSlotPanel(SymbolEnum[][] board) {

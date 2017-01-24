@@ -11,20 +11,29 @@ import modelsVersion2.SymbolEnum;
 import viewsVersion2.BonusGUI;
 
 public class BonusRoundController {
+	private static BonusRoundController controllerInstance;
 	private GameController gameController;
 	private BonusGUI bonusView;
 	private BonusRoundModel bonusModel;
 	private ActionListener listener;
 	
-	public BonusRoundController(GameController controller) {
-		//Set the game controller to the value passed
-		gameController = controller;
+	public BonusRoundController() {
+		//Set the game controller
+		gameController = GameController.getGameControllerInstance();
 		
 		//Create the bonus round model
 		bonusModel = new BonusRoundModel();
 		
 		//Create event handler for bonus round GUI
 		listener = new EventHandler();
+	}
+	
+	//Use singleton design pattern to allow only one instance of bonus round controller.
+	public static BonusRoundController getBonusRoundControllerInstance() {
+		if(controllerInstance == null) {
+			controllerInstance = new BonusRoundController();
+		}
+		return controllerInstance;
 	}
 	
 	public void generateGameBoard() {

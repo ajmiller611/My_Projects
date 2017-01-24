@@ -15,6 +15,7 @@ import viewsVersion2.GameGUI;
 import viewsVersion2.BonusGUI;
 
 public class GameController {
+	private static GameController controllerInstance;
 	private SlotGameModel gameModel;
 	private GameGUI gameView;
 	private BonusRoundController bonusController;
@@ -25,14 +26,30 @@ public class GameController {
 		//Create game model
 		gameModel = new SlotGameModel();
 		
-		//Create bonus round controller and pass a value of the game controller
-		bonusController = new BonusRoundController(this);
+		//Set the bonus round controller
+		//bonusController = BonusRoundController.getBonusRoundControllerInstance();
 		
 		//Create event handler for GUI
 		listener = new EventHandler();
 		
-		//Create payout controller and pass a value of the game controller
-		payout = new PayoutController(this);
+		//Set the payout controller
+		//payout = PayoutController.getPayoutControllerInstance();
+	}
+	
+	//Use singleton design pattern to allow only one instance of game controller.
+	public static GameController getGameControllerInstance() {
+		if(controllerInstance == null) {
+			controllerInstance = new GameController();
+		}
+		return controllerInstance;
+	}
+	
+	public void setBonusRoundController(BonusRoundController controller) {
+		bonusController = controller;
+	}
+	
+	public void setPayoutController(PayoutController controller) {
+		payout = controller;
 	}
 	
 	public void loadResources() {
@@ -50,8 +67,8 @@ public class GameController {
 	}
 	
 	public void startApplication() {
-		//Create game GUI and pass a value of the game controller
-		gameView = new GameGUI(this);
+		//Create game GUI
+		gameView = new GameGUI();
 		
 		/*
 		 * Create bonus GUI now.
@@ -69,7 +86,7 @@ public class GameController {
 	
 	public BonusGUI createBonusGUI() {
 		//Create bonus GUI and passed needed values
-		BonusGUI gui = new BonusGUI(gameView.getMainPanel(), bonusController);
+		BonusGUI gui = new BonusGUI(gameView.getMainPanel());
 		
 		//Give bonus controller the value of the bonus GUI
 		bonusController.setBonusGUIView(gui);

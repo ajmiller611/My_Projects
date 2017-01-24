@@ -7,14 +7,15 @@ import modelsVersion2.Payline;
 import modelsVersion2.SymbolEnum;
 
 public class PayoutController {
+	private static PayoutController controllerInstance;
 	private GameController controller;
 	private Payline paylineOne, paylineTwo, paylineThree, paylineFour, paylineFive,
 		paylineSix, paylineSeven, paylineEight, paylineNine;
 	private ArrayList<Payline> paylineList = new ArrayList<Payline>();
 
-	public PayoutController(GameController controller) {
-		//Set the game controller to the value passed
-		this.controller = controller;
+	public PayoutController() {
+		//Set the game controller
+		controller = GameController.getGameControllerInstance();
 		
 		//Create all 9 paylines and add to the list of paylines
 		paylineOne = new Payline();
@@ -43,6 +44,14 @@ public class PayoutController {
 
 		paylineNine = new Payline();
 		paylineList.add(paylineNine);
+	}
+	
+	//Use singleton design pattern to allow only one instance of payout controller.
+	public static PayoutController getPayoutControllerInstance() {
+		if(controllerInstance == null) {
+			controllerInstance = new PayoutController();
+		}
+		return controllerInstance;
 	}
 	
 	//Sets the coordinates for each payline and sets status of active payline flag

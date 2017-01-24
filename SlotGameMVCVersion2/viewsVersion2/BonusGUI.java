@@ -29,8 +29,8 @@ public class BonusGUI {
 	 * @param controller reference to bonus controller
 	 */
 	
-	public BonusGUI(JPanel panel, BonusRoundController controller) {
-		this.controller = controller;
+	public BonusGUI(JPanel panel) {
+		this.controller = BonusRoundController.getBonusRoundControllerInstance();
 		listener = controller.getActionListener() ;
 		gameBoard = this.controller.getGameBoard();
 		panel.add(createBonusGUI(), "Bonus");
