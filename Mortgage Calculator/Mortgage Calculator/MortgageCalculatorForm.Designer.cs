@@ -137,7 +137,7 @@
             this.interestRateTextBox.Size = new System.Drawing.Size(70, 29);
             this.interestRateTextBox.TabIndex = 4;
             this.interestRateTextBox.Text = "0.00%";
-            this.interestRateTextBox.Leave += new System.EventHandler(this.interestRateTextBox_Leave);
+            this.interestRateTextBox.Leave += new System.EventHandler(this.InterestRateTextBox_Leave);
             // 
             // termLabel
             // 
@@ -158,7 +158,7 @@
             this.termTextBox.Name = "termTextBox";
             this.termTextBox.Size = new System.Drawing.Size(70, 29);
             this.termTextBox.TabIndex = 6;
-            this.termTextBox.Leave += new System.EventHandler(this.termTextBox_Leave);
+            this.termTextBox.Leave += new System.EventHandler(this.TermTextBox_Leave);
             // 
             // principalTextBox
             // 
@@ -169,7 +169,7 @@
             this.principalTextBox.Size = new System.Drawing.Size(150, 29);
             this.principalTextBox.TabIndex = 2;
             this.principalTextBox.Text = "$0.00";
-            this.principalTextBox.Leave += new System.EventHandler(this.principalTextBox_Leave);
+            this.principalTextBox.Leave += new System.EventHandler(this.PrincipalTextBox_Leave);
             // 
             // termComboBox
             // 
@@ -228,9 +228,9 @@
             this.closeButton.TabIndex = 0;
             this.closeButton.Text = "Close";
             this.closeButton.UseVisualStyleBackColor = true;
-            this.closeButton.Click += new System.EventHandler(this.closeButton_Click);
-            this.closeButton.MouseLeave += new System.EventHandler(this.closeButton_MouseLeave);
-            this.closeButton.MouseHover += new System.EventHandler(this.closeButton_MouseHover);
+            this.closeButton.Click += new System.EventHandler(this.CloseButton_Click);
+            this.closeButton.MouseLeave += new System.EventHandler(this.CloseButton_MouseLeave);
+            this.closeButton.MouseHover += new System.EventHandler(this.CloseButton_MouseHover);
             // 
             // calculateButton
             // 
@@ -241,7 +241,7 @@
             this.calculateButton.TabIndex = 1;
             this.calculateButton.Text = "Calculate";
             this.calculateButton.UseVisualStyleBackColor = true;
-            this.calculateButton.Click += new System.EventHandler(this.calculateButton_Click);
+            this.calculateButton.Click += new System.EventHandler(this.CalculateButton_Click);
             // 
             // monthlyPaymentLabel
             // 

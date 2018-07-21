@@ -1,11 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace Mortgage_Calculator
@@ -27,7 +20,7 @@ namespace Mortgage_Calculator
             termComboBox.SelectedIndex = 0;            
         }
 
-        private void principalTextBox_Leave(object sender, EventArgs e)
+        private void PrincipalTextBox_Leave(object sender, EventArgs e)
         {
             try
             {
@@ -54,12 +47,12 @@ namespace Mortgage_Calculator
                 // If the user is closing the program by using the closeButton then suppress incorrect format message
                 if (closeButtonSuppressMessageFlag == false && principalTextBox.Text != "")
                 {
-                    showIncorrectFormatMessage(principalTextBox, "Incorrect format. Please enter a currency in the Loan Amount box");
+                    ShowIncorrectFormatMessage(principalTextBox, "Incorrect format. Please enter a currency in the Loan Amount box");
                 }                                           
             }                 
         }
 
-        private void showIncorrectFormatMessage(Control currentControl, string message)
+        private void ShowIncorrectFormatMessage(Control currentControl, string message)
         {
             MessageBox.Show(message, "Attention", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
@@ -72,7 +65,7 @@ namespace Mortgage_Calculator
             currentControl.BeginInvoke((MethodInvoker)delegate { currentControl.Focus(); });
         }
 
-        private void interestRateTextBox_Leave(object sender, EventArgs e)
+        private void InterestRateTextBox_Leave(object sender, EventArgs e)
         {
             try
             {
@@ -104,12 +97,12 @@ namespace Mortgage_Calculator
                 // If the user is closing the program by using the closeButton then suppress incorrect format message
                 if (closeButtonSuppressMessageFlag == false && interestRateTextBox.Text != "")
                 {
-                    showIncorrectFormatMessage(interestRateTextBox, "Incorrect format. Please enter a percent in the Interest Rate box");
+                    ShowIncorrectFormatMessage(interestRateTextBox, "Incorrect format. Please enter a percent in the Interest Rate box");
                 }
             }
         }
 
-        private void termTextBox_Leave(object sender, EventArgs e)
+        private void TermTextBox_Leave(object sender, EventArgs e)
         {
             try
             {
@@ -120,17 +113,17 @@ namespace Mortgage_Calculator
                 // If the user is closing the program by using the closeButton then suppress incorrect format message
                 if (closeButtonSuppressMessageFlag == false && termTextBox.Text != "")
                 {
-                    showIncorrectFormatMessage(termTextBox, "Incorrect format. Please enter the number of years or months in the Term box");
+                    ShowIncorrectFormatMessage(termTextBox, "Incorrect format. Please enter the number of years or months in the Term box");
                 }
             }
         }
 
-        private void calculateButton_Click(object sender, EventArgs e)
+        private void CalculateButton_Click(object sender, EventArgs e)
         {
             // Check for values in textboxs
             if (principalTextBox.Text.Equals("") || interestRateTextBox.Text.Equals("") || termTextBox.Text.Equals(""))
             {
-                showIncorrectFormatMessage(principalTextBox, "Please check that all data has been entered in.");                
+                ShowIncorrectFormatMessage(principalTextBox, "Please check that all data has been entered in.");                
             }
             else
             {
@@ -194,17 +187,17 @@ namespace Mortgage_Calculator
             }            
         }
 
-        private void closeButton_MouseHover(object sender, EventArgs e)
+        private void CloseButton_MouseHover(object sender, EventArgs e)
         {
             closeButtonSuppressMessageFlag = true;
         }
 
-        private void closeButton_MouseLeave(object sender, EventArgs e)
+        private void CloseButton_MouseLeave(object sender, EventArgs e)
         {
             closeButtonSuppressMessageFlag = false;
         }        
 
-        private void closeButton_Click(object sender, EventArgs e)
+        private void CloseButton_Click(object sender, EventArgs e)
         {
             this.Close();
         }      
