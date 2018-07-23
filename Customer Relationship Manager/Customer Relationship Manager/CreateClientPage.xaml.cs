@@ -24,5 +24,24 @@ namespace Customer_Relationship_Manager
         {
             InitializeComponent();
         }
+
+        private void CreateClientButton_Click(object sender, RoutedEventArgs e)
+        {
+            //TODO Add validation for user entered data            
+
+            Address newClientAddress = new Address(StreetTextBox.Text, CityTextBox.Text, StateTextBox.Text, ZipCodeTextBox.Text);
+
+            if (CompanyNameTextBox.Text != "")
+            {
+                Client newClient = new Client(ClientNameTextBox.Text, CompanyNameTextBox.Text, PhoneNumberTextBox.Text, NotesTextBox.Text, newClientAddress);                
+            }
+            else
+            {
+                Client newClient = new Client(ClientNameTextBox.Text, PhoneNumberTextBox.Text, NotesTextBox.Text, newClientAddress);
+            }
+
+            MessageBox.Show("Client " + ClientNameTextBox.Text + " has been created.", "Client Created", MessageBoxButton.OK, MessageBoxImage.Information);
+
+        }
     }
 }
