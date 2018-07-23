@@ -229,7 +229,12 @@ public class GameGUI {
 		resultsPanel.setMaximumSize(new Dimension(220, 130));
 		resultsPanel.setBorder(BorderFactory.createCompoundBorder(BorderFactory.createLineBorder(Color.CYAN, 3), resultsPanel.getBorder()));
 		
-		//GridLayout adds components left to right so must add icons from reelBoard row by row to jList
+		/*
+		 * GridLayout direction it adds components is based on the container's ComponentOrientation property.
+		 * Reference: https://docs.oracle.com/javase/7/docs/api/java/awt/GridLayout.html
+		 * 
+		 * The JPanel is set left to right so the GridLayout will add components left to right so must add icons from reelBoard row by row to jList
+		 */
 		for (int c = 0; c < 3; c++) {
 			for (int d = 0; d < 5; d++) {
 			//ImageIcon image = new ImageIcon(board[c][d].getImage());

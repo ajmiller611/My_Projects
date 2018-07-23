@@ -65,82 +65,49 @@ public class BonusRoundController {
 		public void mouseClicked(MouseEvent e) {
 			if(bonusModel.getNumberOfSelectedImages() < 3) {
 				//Once a symbol is clicked, change the icon, get value of symbol and update labels, remove mouse listener
-				if(e.getComponent().getName().equals("Position 0 0")) {
-					bonusView.getDisplayBoard()[0][0].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[0][0].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[0][0].getValue() * gameController.getBetPerLine()));
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[0][0].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				if(e.getComponent().getName().equals("Position 0 0")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());					
 				
-				} else if(e.getComponent().getName().equals("Position 0 1")) {
-					bonusView.getDisplayBoard()[0][1].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[0][1].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[0][1].getValue() * gameController.getBetPerLine()));
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[0][1].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 0 1")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 0 2")) {
-					bonusView.getDisplayBoard()[0][2].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[0][2].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[0][2].getValue() * gameController.getBetPerLine()));
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[0][2].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 0 2")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 1 0")) {
-					bonusView.getDisplayBoard()[1][0].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[1][0].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[1][0].getValue() * gameController.getBetPerLine()));
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[1][0].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 1 0")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 1 1")) {
-					bonusView.getDisplayBoard()[1][1].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[1][1].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[1][1].getValue() * gameController.getBetPerLine()));				
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[1][1].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 1 1")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 1 2")) {
-					bonusView.getDisplayBoard()[1][2].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[1][2].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[1][2].getValue() * gameController.getBetPerLine()));				
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[1][2].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 1 2")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 2 0")) {
-					bonusView.getDisplayBoard()[2][0].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[2][0].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[2][0].getValue() * gameController.getBetPerLine()));				
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[2][0].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 2 0")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 2 1")) {
-					bonusView.getDisplayBoard()[2][1].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[2][1].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + (bonusModel.getGameBoard()[2][1].getValue() * gameController.getBetPerLine()));				
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[2][1].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 2 1")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				
-				} else if(e.getComponent().getName().equals("Position 2 2")) {
-					bonusView.getDisplayBoard()[2][2].setIcon(bonusModel.getImageToDisplayAfterSelection());
-					bonusModel.addToWinnings(bonusModel.getGameBoard()[2][2].getValue() * gameController.getBetPerLine());
-					bonusView.updateWinningsLabelText("Won: " + bonusModel.getGameBoard()[2][2].getValue() * gameController.getBetPerLine());				
-					bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
-					bonusView.getDisplayBoard()[2][2].removeMouseListener(this);
-					bonusModel.incrementNumberOfSelectedImages();
+				} else if(e.getComponent().getName().equals("Position 2 2")) {					
+					updateBonusGameIconAtPosition(e.getComponent().getName());
 				}
 			} 
 			if(bonusModel.getNumberOfSelectedImages() == 3) {
 				bonusView.showReturnToSlotsButton();
 			}
+		}
+		
+		public void updateBonusGameIconAtPosition(String position) {
+			int x = Integer.parseInt(position.substring(9, 10));
+			int y = Integer.parseInt(position.substring(11));
+			
+			bonusView.getDisplayBoard()[x][y].setIcon(bonusModel.getImageToDisplayAfterSelection());
+			bonusModel.addToWinnings(bonusModel.getGameBoard()[x][y].getValue() * gameController.getBetPerLine());
+			bonusView.updateWinningsLabelText("Won: " + bonusModel.getGameBoard()[x][y].getValue() * gameController.getBetPerLine());				
+			bonusView.updateTotalWinningsLabelText("Total Won: " + bonusModel.getTotalWinnings());
+			bonusView.getDisplayBoard()[x][y].removeMouseListener(this);
+			bonusModel.incrementNumberOfSelectedImages();
 		}
 		
 		public void actionPerformed(ActionEvent e) {

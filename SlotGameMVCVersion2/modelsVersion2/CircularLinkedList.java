@@ -1,5 +1,6 @@
 package modelsVersion2;
 
+//Modified Circular Linked List Data Structure to simulate the reels
 public class CircularLinkedList {
 	
 	private class Node {
@@ -57,12 +58,6 @@ public class CircularLinkedList {
 		int temp = 0;
 		Node runner = head;
 		
-		/*if (index == -1){
-			return head.prev.data;
-		} else if (index == totalElements){
-			return tail.next.data;
-		}*/
-		
 		while (temp != index && index <= totalElements) {
 			runner = runner.next;
 			temp++;
@@ -76,12 +71,6 @@ public class CircularLinkedList {
 		}
 		int temp = 0;
 		Node runner = head;
-		
-		/*if (index == -1){
-			return head.prev.data;
-		} else if (index == totalElements){
-			return tail.next.data;
-		}*/
 		
 		while (temp != index && index <= totalElements) {
 			runner = runner.next;
