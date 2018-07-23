@@ -1,0 +1,19 @@
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\Customer Relationship Manager.exe.config
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\Customer Relationship Manager.exe
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\Customer Relationship Manager.pdb
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager.csprojAssemblyReference.cache
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\MainWindow.baml
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\MainWindow.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\App.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager_MarkupCompile.cache
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager_MarkupCompile.lref
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager.g.resources
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer_Relationship_Manager.Properties.Resources.resources
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager.csproj.GenerateResource.cache
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager.csproj.CoreCompileInputs.cache
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager.exe
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager.pdb
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\CreateClientPage.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\CreateClientPage.baml
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\HomePage.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\HomePage.baml
