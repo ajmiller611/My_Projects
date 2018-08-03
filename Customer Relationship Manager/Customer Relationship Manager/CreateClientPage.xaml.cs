@@ -31,14 +31,16 @@ namespace Customer_Relationship_Manager
 
             Address newClientAddress = new Address(StreetTextBox.Text, CityTextBox.Text, StateTextBox.Text, ZipCodeTextBox.Text);
 
-            if (CompanyNameTextBox.Text != "")
+            /* if (CompanyNameTextBox.Text != "")
             {
                 Client newClient = new Client(ClientNameTextBox.Text, CompanyNameTextBox.Text, PhoneNumberTextBox.Text, NotesTextBox.Text, newClientAddress);                
             }
             else
             {
                 Client newClient = new Client(ClientNameTextBox.Text, PhoneNumberTextBox.Text, NotesTextBox.Text, newClientAddress);
-            }
+            } */
+
+            CRMDB.AddNewClient(ClientNameTextBox.Text, CompanyNameTextBox.Text, PhoneNumberTextBox.Text, NotesTextBox.Text, newClientAddress);
 
             MessageBox.Show("Client " + ClientNameTextBox.Text + " has been created.", "Client Created", MessageBoxButton.OK, MessageBoxImage.Information);
 

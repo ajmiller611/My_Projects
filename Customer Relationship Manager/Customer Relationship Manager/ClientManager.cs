@@ -36,7 +36,7 @@ namespace Customer_Relationship_Manager
             return clientManagerInstance;
         }
 
-        public void addClientToClientList(Client client)
+        public void AddClientToClientList(Client client)
         {
             // Grab starting letter from client's name and make it upper case to test against the keys in clientList
             string startingLetter = client.ClientName.Substring(0, 1).ToUpper();

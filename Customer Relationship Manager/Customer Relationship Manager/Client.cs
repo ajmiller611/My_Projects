@@ -12,7 +12,8 @@ namespace Customer_Relationship_Manager
         public string ClientName { get; private set; }
         public string CompanyName { get; private set; }
         public string PhoneNumber { get; private set; }
-        public string Notes { get; private set; }        
+        public string Notes { get; private set; }
+        public List<Transaction> ClientPurchaseHistory {get; }
         private Address address;
 
         public Client(string clientName, string companyName, string phoneNumber, string notes, Address address)
@@ -21,6 +22,7 @@ namespace Customer_Relationship_Manager
             CompanyName = companyName;
             PhoneNumber = phoneNumber;
             Notes = notes;
+            ClientPurchaseHistory = new List<Transaction>();
             this.address = address;
         }
 
@@ -29,6 +31,7 @@ namespace Customer_Relationship_Manager
             ClientName = clientName;            
             PhoneNumber = phoneNumber;
             Notes = notes;
+            ClientPurchaseHistory = new List<Transaction>();
             this.address = address;
         }
     }

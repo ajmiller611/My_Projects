@@ -17,3 +17,6 @@ C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Custo
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\CreateClientPage.baml
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\HomePage.g.cs
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\HomePage.baml
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\CustomerRelationshipManagerDB.mdf
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\CustomerRelationshipManagerDB_log.ldf
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager_Content.g.cs
