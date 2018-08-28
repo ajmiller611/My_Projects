@@ -20,3 +20,9 @@ C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Custo
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\CustomerRelationshipManagerDB.mdf
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\bin\Debug\CustomerRelationshipManagerDB_log.ldf
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\Customer Relationship Manager_Content.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\ListClientsPage.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\ListClientsPage.baml
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\ClientPurchaseHistory.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\ClientSearchPage.g.cs
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\ClientPurchaseHistory.baml
+C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\obj\Debug\ClientSearchPage.baml

@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Customer_Relationship_Manager"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="600"
-      Title="CreateClient">
+      Title="CreateClientPage">
 
     <Grid>
         <Grid.ColumnDefinitions>

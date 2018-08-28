@@ -27,8 +27,25 @@ namespace Customer_Relationship_Manager
 
         private void CreateClient_Click(object sender, RoutedEventArgs e)
         {
-            CreateClientPage newClientPage = new CreateClientPage();
-            this.NavigationService.Navigate(newClientPage);
+            CreateClientPage createClientPage = new CreateClientPage();
+            this.NavigationService.Navigate(createClientPage);
+        }
+
+        private void ListClients_Click(object sender, RoutedEventArgs e)
+        {
+            ListClientsPage listClientsPage = new ListClientsPage();
+            this.NavigationService.Navigate(listClientsPage);
+        }
+
+        private void ClientPurchaseHistory_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void ClientSearch_Click(object sender, RoutedEventArgs e)
+        {
+            ClientSearchPage clientSearchPage = new ClientSearchPage();
+            this.NavigationService.Navigate(clientSearchPage);
         }
     }
 }

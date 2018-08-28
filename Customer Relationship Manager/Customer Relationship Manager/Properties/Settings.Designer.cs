@@ -34,5 +34,16 @@ namespace Customer_Relationship_Manager.Properties {
                 return ((string)(this["connection_String"]));
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(LocalDB)\\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\\CustomerRelat" +
+            "ionshipManagerDB.mdf;Integrated Security=True")]
+        public string CustomerRelationshipManagerDBConnectionString {
+            get {
+                return ((string)(this["CustomerRelationshipManagerDBConnectionString"]));
+            }
+        }
     }
 }

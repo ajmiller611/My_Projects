@@ -69,13 +69,39 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ClientPurchaseHistory.xaml.cs">
+      <DependentUpon>ClientPurchaseHistory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ClientSearchPage.xaml.cs">
+      <DependentUpon>ClientSearchPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="CRMDB.cs" />
+    <Compile Include="CustomerRelationshipManagerDBDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CustomerRelationshipManagerDBDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="ListClientsPage.xaml.cs">
+      <DependentUpon>ListClientsPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Transaction.cs" />
+    <Page Include="ClientPurchaseHistory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ClientSearchPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="CreateClientPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="HomePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ListClientsPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -120,6 +146,17 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="CustomerRelationshipManagerDBDataSet.xsc">
+      <DependentUpon>CustomerRelationshipManagerDBDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="CustomerRelationshipManagerDBDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>CustomerRelationshipManagerDBDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CustomerRelationshipManagerDBDataSet.xss">
+      <DependentUpon>CustomerRelationshipManagerDBDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

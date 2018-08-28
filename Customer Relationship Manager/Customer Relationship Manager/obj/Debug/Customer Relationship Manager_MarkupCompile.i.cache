@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Andrew\Documents\GitHub\My_Projects\Customer Relationship Manager\Customer Relationship Manager\App.xaml
-3-827283235
+6-1580450209
 2169381072
-17-971584931
+211090958095
 131569487696
-CreateClientPage.xaml;HomePage.xaml;MainWindow.xaml;
+ClientPurchaseHistory.xaml;ClientSearchPage.xaml;CreateClientPage.xaml;HomePage.xaml;ListClientsPage.xaml;MainWindow.xaml;
 
-False
+True
 

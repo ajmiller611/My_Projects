@@ -1,0 +1,52 @@
+﻿<Page x:Class="Customer_Relationship_Manager.ClientSearchPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Customer_Relationship_Manager"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="600"
+      Title="ClientSearchPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <Label Content="Client Search" Grid.Column="0" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="22" FontWeight="Bold"/>
+
+        <Label Content="By Client Name:" Grid.Column="0" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14" />
+        <TextBox x:Name="SearchClientNameTextBox" Grid.Column="0" Grid.Row="1" HorizontalAlignment="Right" Height="25" Margin="0,0,60,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+
+        <Label Content="By Company Name:" Grid.Column="1" Grid.Row="1" Margin="0,0,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="14" />
+        <TextBox x:Name="SearchCompanyNameTextBox" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Right" Height="25" Margin="0,0,30,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120" VerticalContentAlignment="Center"/>
+
+        <Button x:Name="ClientSearchByFirstNameButton" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="40" Margin="20,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="ClientSearchByFirstNameButton_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Search By First Name</TextBlock>
+        </Button>
+        <Button x:Name="ClientSearchByLastNameButton" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="40" Margin="105,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="ClientSearchByLastNameButton_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Search By Last Name</TextBlock>
+        </Button>
+        <Button x:Name="ClientSearchByFullNameButton" Grid.Column="0" Grid.Row="2" HorizontalAlignment="Left" Height="40" Margin="190,10,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" Click="ClientSearchByFullNameButton_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Search By Full Name</TextBlock>
+        </Button>
+
+        <Button x:Name="ClientSearchByCompanyNameButton" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="40" Margin="20,10,0,0" VerticalAlignment="Top" Width="100" FontWeight="Bold" Click="ClientSearchByCompanyNameButton_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Search By Company Name</TextBlock>
+        </Button>
+
+        <Button x:Name="ClientSearchByClientAndCompanyNameButton" Grid.Column="1" Grid.Row="2" HorizontalAlignment="Left" Height="40" Margin="130,10,30,0" VerticalAlignment="Top" Width="125" FontWeight="Bold" Click="ClientSearchByClientAndCompanyNameButton_Click">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center">Search By Client and Company Name</TextBlock>
+        </Button>
+
+        <DataGrid x:Name="ClientSearchDataGrid" Grid.Column="0" Grid.Row="3" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="240" Margin="20,10,0,0" VerticalAlignment="Top" Width="540" IsReadOnly="True" />
+        
+    </Grid>
+</Page>
